@@ -3,8 +3,9 @@ const controller = require('./controller');
 
 const router = Router();
 
-router.get('/', controller.getAccounts); // To get all accounts
-router.post('/post', controller.addAccount); // Add a new account
-router.put('/update/:id', controller.updateAccount); // Update an existing account
+router.post('/post', controller.addLocations);
+router.get ('/:id', controller.getLocationsById);
+router.get('/', controller.getLocations)
+router.put('/update/:id', controller.updateLocations);
 
 module.exports = router;
